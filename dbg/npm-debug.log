@@ -1,0 +1,60 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'jsdom' ]
+2 info using npm@1.3.11
+3 info using node@v0.10.20
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose cache add [ 'jsdom', null ]
+6 verbose cache add name=undefined spec="jsdom" args=["jsdom",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'jsdom',
+7 verbose parsed url   path: 'jsdom',
+7 verbose parsed url   href: 'jsdom' }
+8 silly lockFile 1fbe4fcb-jsdom jsdom
+9 verbose lock jsdom C:\Users\I303035\AppData\Roaming\npm-cache\1fbe4fcb-jsdom.lock
+10 silly lockFile 1fbe4fcb-jsdom jsdom
+11 silly lockFile 1fbe4fcb-jsdom jsdom
+12 verbose addNamed [ 'jsdom', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile be40d96d-jsdom jsdom@
+15 verbose lock jsdom@ C:\Users\I303035\AppData\Roaming\npm-cache\be40d96d-jsdom.lock
+16 silly addNameRange { name: 'jsdom', range: '*', hasData: false }
+17 verbose url raw jsdom
+18 verbose url resolving [ 'https://registry.npmjs.org/', './jsdom' ]
+19 verbose url resolved https://registry.npmjs.org/jsdom
+20 info trying registry request attempt 1 at 16:02:45
+21 http GET https://registry.npmjs.org/jsdom
+22 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+23 info trying registry request attempt 2 at 16:02:55
+24 http GET https://registry.npmjs.org/jsdom
+25 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+26 info trying registry request attempt 3 at 16:03:55
+27 http GET https://registry.npmjs.org/jsdom
+28 silly lockFile be40d96d-jsdom jsdom@
+29 silly lockFile be40d96d-jsdom jsdom@
+30 error network getaddrinfo ENOTFOUND
+30 error network This is most likely not a problem with npm itself
+30 error network and is related to network connectivity.
+30 error network In most cases you are behind a proxy or have bad network settings.
+30 error network
+30 error network If you are behind a proxy, please make sure that the
+30 error network 'proxy' config is set properly.  See: 'npm help config'
+31 error System Windows_NT 6.1.7601
+32 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "jsdom"
+33 error cwd C:\cygwin\home\I303035\node\dbg
+34 error node -v v0.10.20
+35 error npm -v 1.3.11
+36 error syscall getaddrinfo
+37 error code ENOTFOUND
+38 error errno ENOTFOUND
+39 verbose exit [ 1, true ]
