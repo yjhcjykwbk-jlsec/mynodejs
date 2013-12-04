@@ -1,3 +1,6 @@
+//in this file it demonstrate a cluster containing four working processes which all listen to port 8888
+//everytime a process get a request, it handles it and then exit
+//then we give four http requests and everytime there's a different processes that handle with it
 var cluster = require('cluster');
 var http = require('http');
 var numCPUs = require('os').cpus().length;
@@ -26,13 +29,17 @@ process.on('message',function(msg){
 });
 //after current process has started for 3 seconds
 function timeout() {
-  console.error("[timeout]3 seconds after "+ process.pid+" has started ...");
+  console.error("[timeout]30 seconds after "+ process.pid+" has started ...");
   //if current process is not master, then kill it
   //process will first disconnect from cluster, then exit
   if(cluster.isWorker) process.exit(0);
 }
+function successMsg(){
+  console.log("[success]:I am worker "+process.pid+" and i have handled a request");
+  process.exit();
+}
 var timeouts = [];
-timeouts[process.pid]=setTimeout(timeout, 3000);
+timeouts[process.pid]=setTimeout(timeout, 30000);
 if(cluster.isMaster) {
   // Fork worker processes.
   for (var i = 0; i < numCPUs; i++) 
@@ -43,7 +50,7 @@ else {
   //Here workers all share the same TCP/HTTP connection
   http.createServer(function(req, res) {
     res.writeHead(200);
-    res.end("hello world\n");
+    res.end("hello world, i am worker thread "+process.pid+"\n");
     setTimeout(successMsg,1000);
   }).listen(8888);
 }

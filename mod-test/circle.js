@@ -5,5 +5,5 @@ module.exports.area = function (r) {
 module.exports.circumference = function (r) {
     return 2 * PI * r;
 };
-yy="i am global scope";
+console.log("my exports:");
 console.log(exports);

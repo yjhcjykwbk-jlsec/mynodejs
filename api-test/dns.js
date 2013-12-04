@@ -1,4 +1,4 @@
 var dns=require("dns");
-dns.resolve("www.youtube.com",function(err,addresses){
+dns.resolve("www.sap.corp",function(err,addresses){
   console.log(addresses);
 });
