@@ -9,6 +9,7 @@ http.createServer(function(request,response){
   response.write("Hello World");
   console.log(url.parse(request.url).pathname);
   response.end();
+  console.log("helloworld");
   //1000ms later after response it, the thread will log sth
   setTimeout(function(){console.log("time out after response");},1000);
 }).listen(8888);
